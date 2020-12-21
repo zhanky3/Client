@@ -4,7 +4,7 @@ import Start from '@/components/Start'
 import Index from '@/components/Index'
 import ArticleDetails from '@/components/ArticleDetails'
 import Login from '@/components/Login'
-import Signup from '@/components/Signup'
+import Register from '@/components/Register'
 Vue.use(Router)
 
 export default new Router({
@@ -30,9 +30,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/join',
-      name: 'sign up',
-      component: Signup
+      path: '/register',
+      name: 'register',
+      component: Register
     }
   ],
   mode: 'history'

@@ -90,7 +90,4 @@ a {
     padding: 20px 50px;
     color: #fff;
 }
-.loginbox h1{
-    color: #fff;
-}
 </style>
