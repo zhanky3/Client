@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Start from '@/components/Start'
 import Index from '@/components/Index'
 import ArticleDetails from '@/components/ArticleDetails'
 import Login from '@/components/Login'
@@ -10,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: Index
+      name: 'start',
+      component: Start
     },
     {
       path: '/index',

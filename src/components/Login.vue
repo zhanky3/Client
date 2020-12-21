@@ -1,19 +1,21 @@
 <template>
   <div class="hello">
+    <div class="loginbox">
     <h1>{{ msg }}</h1>
-  <div>
-      username
-      <el-input v-model="userID"  class='inputClass'></el-input>
-   </div>
-   <br>
-   <div>
-      password
-      <el-input v-model="password" class='inputClass' type='password'></el-input>
-   </div>
-   <br>
-   <div>
-    <el-button type="primary" @click="cilckLogin()">login</el-button>
-  </div>
+    <div>
+        username
+        <el-input v-model="userID"  class='inputClass'></el-input>
+    </div>
+    <br>
+    <div>
+        password
+        <el-input v-model="password" class='inputClass' type='password'></el-input>
+    </div>
+    <br>
+    <div>
+      <el-button type="primary" @click="cilckLogin()">login</el-button>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -22,7 +24,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Sign in to Single Blog',
+      msg: 'Login',
       userID: '',
       password: ''
     }
@@ -46,7 +48,7 @@ export default {
             username: that.userID,
             token: response.data.ok
           })
-          that.$router.push('/')
+          that.$router.push('/index')
         } else {
           alert(response.data.error)
         }
@@ -77,5 +79,18 @@ a {
 }
 .inputClass{
   width:300px
+}
+.loginbox{
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;
+    background: #00000060;
+    padding: 20px 50px;
+    color: #fff;
+}
+.loginbox h1{
+    color: #fff;
 }
 </style>

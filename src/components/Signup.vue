@@ -1,33 +1,35 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-  <div>
-      username
-      <el-input v-model="userID" placeholder="6~18 digits letters, numbers or _" class='inputClass' @blur='userValidateCheck()'></el-input>
-   </div>
-   <span class='info' id='user'>{{userinfo}}</span>
-   <br>
-   <div>
-      password
-      <el-input v-model="password" placeholder="6-18 digits, upper and lower case letters" class='inputClass' type='password' @blur ='passwordCheck()'></el-input>
-   </div>
-   <span class='info' id='pswd'>{{pswdinfo1}}</span>
-   <br>
-   <div>
-      confirm_P
-      <el-input v-model="passwordConfirm" placeholder="repeat your password" class='inputClass' type='password' @blur='passwordValidateCheck()'></el-input>
-   </div>
-   <span class='info' id='pswd'>{{pswdinfo2}}</span>
-   <br>
-   <div>
-      emailaddr
-      <el-input v-model="mail" class='inputClass' @blur='mailValidateCheck()'></el-input>
-   </div>
-   <span class='info' id='email'>{{emailinfo}}</span>
-   <br>
-   <div>
-    <el-button type="primary" @click='clickJoin()'>register</el-button>
-  </div>
+    <div class="signUpbox">
+        <h1>{{ msg }}</h1>
+      <div>
+          username
+          <el-input v-model="userID" placeholder="6~18 digits letters, numbers or _" class='inputClass' @blur='userValidateCheck()'></el-input>
+      </div>
+      <span class='info' id='user'>{{userinfo}}</span>
+      <br>
+      <div>
+          password
+          <el-input v-model="password" placeholder="6-18 digits, upper and lower case letters" class='inputClass' type='password' @blur ='passwordCheck()'></el-input>
+      </div>
+      <span class='info' id='pswd'>{{pswdinfo1}}</span>
+      <br>
+      <div>
+          confirm_P
+          <el-input v-model="passwordConfirm" placeholder="repeat your password" class='inputClass' type='password' @blur='passwordValidateCheck()'></el-input>
+      </div>
+      <span class='info' id='pswd'>{{pswdinfo2}}</span>
+      <br>
+      <div>
+          emailaddr
+          <el-input v-model="mail" class='inputClass' @blur='mailValidateCheck()'></el-input>
+      </div>
+      <span class='info' id='email'>{{emailinfo}}</span>
+      <br>
+      <div>
+        <el-button type="primary" @click='clickJoin()'>register</el-button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -124,5 +126,15 @@ a {
 }
 .inputClass{
   width:300px
+}
+.signUpbox{
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;
+    background: #00000060;
+    padding: 20px 50px;
+    color: #fff;
 }
 </style>

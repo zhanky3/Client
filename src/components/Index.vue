@@ -2,19 +2,17 @@
 <template>
   <div class="">
       <ul>
-        <li v-for="item in articlesList" :key="item">
-          <el-container >
-            <el-main>
-              <div class="title">
-                <router-link :to="{'path':'/article/details/'+item.id}">{{item.title}}</router-link>
-              </div>
-              <div class="extra">
-                <div class="author">{{item.username}}</div>
-                <div class="date">{{item.date}}</div>
-              </div>
-            </el-main>
-          </el-container>
-        </li>
+        <div class="mes">
+          <li v-for="item in articlesList" :key="item">
+            <el-container >
+              <el-main>
+                <div class="title">
+                  <router-link :to="{'path':'/article/details/'+item.id}">{{item.title}}</router-link>
+                </div>
+              </el-main>
+            </el-container>
+          </li>
+        </div>
       </ul>
       <el-pagination
         layout="prev, pager, next"
@@ -53,15 +51,18 @@ export default {
 
 </script>
 <style>
+body{
+  background: none;
+  background-color: rgb(56, 175, 211);
+}
 .el-pagination {
   position:fixed;
-  left: 20px;
-  right: 20px;
+  left: 40%;
   bottom:0px;
   margin-bottom: 20px;
 }
 .el-container {
-  height: 100px;
+  height: 80px;
   width: 800px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   margin: 5px auto;
@@ -82,17 +83,20 @@ a {
   text-decoration: none;
 }
 .title {
+  font-size: 20px;
   height: 30px;
-}
-.extra {
-  margin-top: 12px;
-  bottom: 10px;
-  font-size: 12px;
+  margin: 0 auto;
 }
 .author {
   float: left;
 }
 .date {
   float: right;
+}
+.mes{
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  background-color: white;
 }
 </style>
