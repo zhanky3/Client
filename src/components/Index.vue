@@ -44,6 +44,17 @@ export default {
         console.log(response.data)
         that.articlesList = response.data.ok.slice(1)
       })
+    },
+    handleCurrentChange: function (currentPage) {
+      var that = this
+      this.$axios.request({
+        url: 'http://localhost:8081/articles?page=' + currentPage.toString(),
+        method: 'GET',
+        responseType: 'json'
+      }).then(function (response) {
+        console.log(response.data)
+        that.articlesList = response.data.ok.slice(1)
+      })
     }
   }
 
