@@ -3,6 +3,7 @@
 ## 实现结果
 + 初始界面中你可以选择是注册还是登录
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020122117343141.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MzY1OQ==,size_16,color_FFFFFF,t_70)
++ 
 
 
 + 如果没有账号可以先去注册界面注册
