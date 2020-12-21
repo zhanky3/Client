@@ -1,4 +1,3 @@
-
 <template>
   <div class="">
       <ul>
@@ -16,6 +15,8 @@
       </ul>
       <el-pagination
         layout="prev, pager, next"
+        @current-change="handleCurrentChange"
+        :current-page="currentPage"
         :total="50">
       </el-pagination>
   </div>
@@ -27,6 +28,7 @@ export default {
   data () {
     return {
       msg: '',
+      currentPage: 1,
       articlesList: []
     }
   },
