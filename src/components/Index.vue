@@ -1,6 +1,21 @@
 <template>
   <div class="">
       <ul>
+        <div class="user">
+          <el-menu
+            :router="true"
+            :default-active="this.$route.path"
+            class="header"
+            mode="horizontal"
+            @select="handleSelect"
+            background="none"
+            active-text-color="rgb(87,215,238)">
+            <el-menu-item index="/user" v-if="this.$store.state.username" style='height:50px;width:150px'>
+              {{ this.$store.state.username }}
+            </el-menu-item>
+            <el-menu-item class = "log" index="/login" style='height:50px;background:red;width:150px'>Logout</el-menu-item>
+          </el-menu>
+        </div>
         <div class="mes">
           <li v-for="item in articlesList" :key="item">
             <el-container >
@@ -111,5 +126,14 @@ a {
   width: 60%;
   height: 100%;
   background-color: white;
+}
+.user{
+    width: 20%;
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background: #24232360;
+    padding: 20px 50px;
+    color: rgb(87, 215, 238);
 }
 </style>

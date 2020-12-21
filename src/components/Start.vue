@@ -14,7 +14,7 @@
       </el-menu-item>
       <el-menu-item class = "log" index="/login" v-if="this.$store.state.username" style='height:50px;background:red;width:150px'>Logout</el-menu-item>
       <div v-else="">
-        <el-menu-item class = "log" index="/join" style='height:40px'>Register</el-menu-item>
+        <el-menu-item class = "log" index="/register" style='height:40px'>Register</el-menu-item>
         <el-menu-item class = "log" index="/login" style='height:40px'>Login</el-menu-item>
       </div>
     </el-menu>
